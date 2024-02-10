@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use "lukas-reineke/indent-blankline.nvim"
   use "mrcjkb/nvim-lastplace"
+  use "akinsho/toggleterm.nvim"
 
   use {
     'akinsho/bufferline.nvim',
