@@ -3,6 +3,7 @@ return require('packer').startup(function(use)
   use 'Mofiqul/dracula.nvim'
   use 'lewis6991/gitsigns.nvim'
   use "lukas-reineke/indent-blankline.nvim"
+  use "mrcjkb/nvim-lastplace"
 
   use {
     'akinsho/bufferline.nvim',
