@@ -2,6 +2,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'Mofiqul/dracula.nvim'
   use 'lewis6991/gitsigns.nvim'
+  use "lukas-reineke/indent-blankline.nvim"
 
   use {
     'akinsho/bufferline.nvim',
