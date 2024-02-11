@@ -6,10 +6,16 @@ return require("packer").startup(function(use)
   use("akinsho/toggleterm.nvim")
   use("wesleimp/stylua.nvim")
   use("neovim/nvim-lspconfig")
+  use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-nvim-lsp")
+  use("hrsh7th/cmp-nvim-lsp-signature-help")
+  use("L3MON4D3/LuaSnip")
+  use("saadparwaiz1/cmp_luasnip")
+  use("hrsh7th/cmp-buffer")
+  use("onsails/lspkind.nvim")
 
   use({
     "akinsho/bufferline.nvim",
-    as = "bufferline.nvim",
     requires = {
       { "nvim-tree/nvim-web-devicons" },
     },
