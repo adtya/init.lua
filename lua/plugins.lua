@@ -1,6 +1,5 @@
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'Mofiqul/dracula.nvim'
   use 'lewis6991/gitsigns.nvim'
   use "lukas-reineke/indent-blankline.nvim"
   use "mrcjkb/nvim-lastplace"
@@ -12,6 +11,13 @@ return require('packer').startup(function(use)
     requires = {
       {'nvim-tree/nvim-web-devicons'}
     }
+  }
+
+  use {
+    'Mofiqul/dracula.nvim',
+    config = function()
+      vim.cmd[[colorscheme dracula]]
+    end
   }
 
   use {
