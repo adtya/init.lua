@@ -1,3 +1,4 @@
+require("cmp_git").setup()
 local cmp = require("cmp")
 
 cmp.setup({
@@ -9,12 +10,21 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
     { name = "nvim_lsp_signature_help" },
-    { name = "buffer" },
     { name = "luasnip" },
+  }, {
+    { name = "buffer" },
   }),
   formatting = {
     format = require("lspkind").cmp_format({
       mode = "symbol_text",
     }),
   },
+})
+
+cmp.setup.filetype("gitcommit", {
+  sources = cmp.config.sources({
+    { name = "git" },
+  }, {
+    { name = "buffer" },
+  }),
 })

@@ -51,13 +51,16 @@ return require("packer").startup(function(use)
 
   use({
     "nvim-telescope/telescope.nvim",
-    requires = {
-      { "nvim-lua/plenary.nvim" },
-    },
+    requires = "nvim-lua/plenary.nvim",
   })
 
   use({
     "nvim-treesitter/nvim-treesitter",
     { run = ":TSUpdate" },
+  })
+
+  use({
+    "petertriho/cmp-git",
+    requires = "nvim-lua/plenary.nvim",
   })
 end)
