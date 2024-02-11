@@ -1,4 +1,4 @@
 require('plugins')
-require('remap')
+require('remaps')
 require('options')
 
