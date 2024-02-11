@@ -30,4 +30,12 @@ require("nvim-treesitter.configs").setup({
     enable = true,
     additional_vim_regex_highlighting = false,
   },
+  incremental_selection = {
+    enable = true,
+    module_path = "nvim-treesitter.incremental_selection",
+  },
+  indent = {
+    enable = true,
+    module_path = "nvim-treesitter.indent",
+  },
 })
