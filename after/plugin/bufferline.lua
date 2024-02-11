@@ -1,5 +1,5 @@
 vim.opt.termguicolors = true
-require('bufferline').setup{
+require("bufferline").setup({
   options = {
     diagnostics = "nvim_lsp",
     themable = false,
@@ -7,11 +7,11 @@ require('bufferline').setup{
       {
         filetype = "neo-tree",
         text = "File Tree",
-        separator = true
-      }
+        separator = true,
+      },
     },
     separator_style = "slant",
     show_buffer_close_icons = false,
     show_close_icon = false,
-  }
-}
+  },
+})

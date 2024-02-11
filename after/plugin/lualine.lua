@@ -1,6 +1,6 @@
-require('lualine').setup{
+require("lualine").setup({
   options = {
     globalstatus = true,
-    theme = 'dracula-nvim'
-  }
-}
+    theme = "dracula-nvim",
+  },
+})

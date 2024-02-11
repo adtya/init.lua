@@ -23,3 +23,4 @@ lspconfig.lua_ls.setup({
   end,
 })
 
+lspconfig.nixd.setup({})

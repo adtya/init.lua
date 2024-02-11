@@ -3,4 +3,3 @@ vim.keymap.set("n", "<C-d>", vim.cmd.bnext)
 vim.keymap.set("n", "<C-h>", vim.cmd.nohlsearch)
 vim.keymap.set("n", "<leader>w", "<cmd>bdelete<Return><cmd>bnext<Return>")
 vim.keymap.set("n", "<leader>q", vim.cmd.close)
-
