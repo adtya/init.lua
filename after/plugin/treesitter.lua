@@ -20,7 +20,7 @@ require("nvim-treesitter.configs").setup({
     "toml",
     "vim",
     "vimdoc",
-    -- "yaml" Not compiling for some reason?
+    "yaml",
   },
 
   sync_install = false,
