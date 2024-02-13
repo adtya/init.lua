@@ -3,6 +3,8 @@ require("lspkind").init({
 })
 
 local vim_lsp_capabilities = vim.lsp.protocol.make_client_capabilities()
+vim_lsp_capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 local lsp_capabilities = vim.tbl_deep_extend(
   "force",
   require("cmp_nvim_lsp").default_capabilities(),
@@ -13,6 +15,10 @@ local lsp_capabilities = vim.tbl_deep_extend(
 local lspconfig = require("lspconfig")
 
 lspconfig.gopls.setup({
+  capabilities = lsp_capabilities,
+})
+
+lspconfig.jsonls.setup({
   capabilities = lsp_capabilities,
 })
 
