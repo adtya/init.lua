@@ -2,14 +2,19 @@ require("lspkind").init({
   mode = "symbol_text",
 })
 
+local vim_lsp_capabilities = vim.lsp.protocol.make_client_capabilities()
 local lsp_capabilities = vim.tbl_deep_extend(
   "force",
   require("cmp_nvim_lsp").default_capabilities(),
-  vim.lsp.protocol.make_client_capabilities(),
+  vim_lsp_capabilities,
   { workspace = { didChangeConfiguration = { dynamicRegistration = true } } }
 )
 
 local lspconfig = require("lspconfig")
+
+lspconfig.gopls.setup({
+  capabilities = lsp_capabilities,
+})
 
 lspconfig.lua_ls.setup({
   capabilities = lsp_capabilities,
@@ -36,10 +41,6 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.nixd.setup({
-  capabilities = lsp_capabilities,
-})
-
-lspconfig.gopls.setup({
   capabilities = lsp_capabilities,
 })
 
