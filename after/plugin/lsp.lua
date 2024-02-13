@@ -46,7 +46,7 @@ lspconfig.lua_ls.setup({
   end,
 })
 
-lspconfig.nixd.setup({
+lspconfig.nil_ls.setup({
   capabilities = lsp_capabilities,
 })
 
