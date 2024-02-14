@@ -14,6 +14,10 @@ local lsp_capabilities = vim.tbl_deep_extend(
 
 local lspconfig = require("lspconfig")
 
+lspconfig.bashls.setup({
+  capabilities = lsp_capabilities,
+})
+
 lspconfig.gopls.setup({
   capabilities = lsp_capabilities,
 })
@@ -47,6 +51,10 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.nil_ls.setup({
+  capabilities = lsp_capabilities,
+})
+
+lspconfig.rust_analyzer.setup({
   capabilities = lsp_capabilities,
 })
 
