@@ -18,6 +18,14 @@ lspconfig.bashls.setup({
   capabilities = lsp_capabilities,
 })
 
+lspconfig.cssls.setup({
+  capabilities = lsp_capabilities,
+})
+
+lspconfig.cssmodules_ls.setup({
+  capabilities = lsp_capabilities,
+})
+
 lspconfig.gopls.setup({
   capabilities = lsp_capabilities,
 })
