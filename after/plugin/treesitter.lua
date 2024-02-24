@@ -2,6 +2,7 @@ require("nvim-treesitter.configs").setup({
 
   ensure_installed = {
     "bash",
+    "css",
     "diff",
     "dockerfile",
     "git_config",
@@ -12,14 +13,17 @@ require("nvim-treesitter.configs").setup({
     "go",
     "gomod",
     "gosum",
+    "javascript",
     "json",
     "markdown",
     "markdown_inline",
     "nix",
     "lua",
     "toml",
+    "typescript",
     "vim",
     "vimdoc",
+    "vue",
     "yaml",
   },
 
