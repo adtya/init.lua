@@ -66,6 +66,14 @@ lspconfig.rust_analyzer.setup({
   capabilities = lsp_capabilities,
 })
 
+lspconfig.tsserver.setup({
+  capabilities = lsp_capabilities,
+})
+
+lspconfig.volar.setup({
+  capabilities = lsp_capabilities,
+})
+
 vim.keymap.set("n", "<F2>", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "<F3>", vim.diagnostic.goto_next)
 
