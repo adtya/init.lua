@@ -1,5 +1,6 @@
 vim.opt.autowrite = true
 vim.opt.background = "dark"
+vim.opt.clipboard = "unnamedplus"
 vim.opt.expandtab = true
 vim.opt.laststatus = 2
 vim.opt.list = true
