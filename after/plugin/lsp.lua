@@ -38,24 +38,25 @@ lspconfig.lua_ls.setup({
   capabilities = lsp_capabilities,
   on_init = function(client)
     local path = client.workspace_folders[1].name
-    if not vim.loop.fs_stat(path .. "/.luarc.json") and not vim.loop.fs_stat(path .. "/.luarc.jsonc") then
-      client.config.settings = vim.tbl_deep_extend("force", client.config.settings, {
-        Lua = {
-          runtime = {
-            version = "LuaJIT",
-          },
-          workspace = {
-            checkThirdParty = false,
-            library = {
-              vim.env.VIMRUNTIME,
-            },
-          },
-        },
-      })
-      client.notify("workspace/didChangeConfiguration", { settings = client.config.settings })
+    if vim.loop.fs_stat(path .. "/.luarc.json") and not vim.loop.fs_stat(path .. "/.luarc.jsonc") then
+      return
     end
-    return true
+
+    client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua, {
+      runtime = {
+        version = "LuaJIT",
+      },
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.env.VIMRUNTIME,
+        },
+      },
+    })
   end,
+  settings = {
+    Lua = {},
+  },
 })
 
 lspconfig.nil_ls.setup({
@@ -89,3 +90,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
   end,
 })
+
+-- refer https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+
