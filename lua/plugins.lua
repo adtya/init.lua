@@ -14,6 +14,7 @@ return require("packer").startup(function(use)
   use("hrsh7th/cmp-buffer")
   use("onsails/lspkind.nvim")
   use("rafamadriz/friendly-snippets")
+  use("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
 
   use({
     "akinsho/bufferline.nvim",

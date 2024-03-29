@@ -2,6 +2,11 @@ require("lspkind").init({
   mode = "symbol_text",
 })
 
+require("lsp_lines").setup()
+vim.diagnostic.config({
+  virtual_text = false,
+})
+
 local vim_lsp_capabilities = vim.lsp.protocol.make_client_capabilities()
 vim_lsp_capabilities.textDocument.completion.completionItem.snippetSupport = true
 
@@ -38,7 +43,7 @@ lspconfig.lua_ls.setup({
   capabilities = lsp_capabilities,
   on_init = function(client)
     local path = client.workspace_folders[1].name
-    if vim.loop.fs_stat(path .. "/.luarc.json") and not vim.loop.fs_stat(path .. "/.luarc.jsonc") then
+    if vim.uv.fs_stat(path .. "/.luarc.json") and not vim.uv.fs_stat(path .. "/.luarc.jsonc") then
       return
     end
 
@@ -63,16 +68,17 @@ lspconfig.nil_ls.setup({
   capabilities = lsp_capabilities,
 })
 
-lspconfig.rust_analyzer.setup({
+lspconfig.ruby_ls.setup({
   capabilities = lsp_capabilities,
 })
 
-lspconfig.tsserver.setup({
+lspconfig.rust_analyzer.setup({
   capabilities = lsp_capabilities,
 })
 
 lspconfig.volar.setup({
   capabilities = lsp_capabilities,
+  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
 })
 
 vim.keymap.set("n", "<F2>", vim.diagnostic.goto_prev)
@@ -92,4 +98,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- refer https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-
