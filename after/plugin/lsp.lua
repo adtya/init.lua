@@ -68,7 +68,7 @@ lspconfig.nil_ls.setup({
   capabilities = lsp_capabilities,
 })
 
-lspconfig.ruby_ls.setup({
+lspconfig.ruby_lsp.setup({
   capabilities = lsp_capabilities,
 })
 
