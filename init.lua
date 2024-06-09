@@ -19,3 +19,5 @@ opts = {
 }
 
 require("lazy").setup("plugins", opts)
+
+require("remaps")
