@@ -15,7 +15,7 @@ Plugin.opts = {
     component_separators = "|",
     section_separators = "",
     disabled_filetypes = {
-      statusline = { "NvimTree" },
+      statusline = { "neo-tree" },
     },
   },
 }
