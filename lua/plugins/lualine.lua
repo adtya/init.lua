@@ -11,6 +11,7 @@ end
 Plugin.opts = {
   options = {
     theme = "dracula-nvim",
+    globalstatus = true,
     icons_enabled = true,
     component_separators = "|",
     section_separators = "",
