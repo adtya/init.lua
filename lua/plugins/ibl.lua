@@ -9,9 +9,6 @@ Plugin.opts = {
   scope = {
     enabled = false,
   },
-  indent = {
-    char = "▏",
-  },
 }
 
 return Plugin
