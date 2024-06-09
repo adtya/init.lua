@@ -2,7 +2,7 @@ local Plugin = { "akinsho/bufferline.nvim" }
 Plugin.version = "*"
 Plugin.dependencies = "nvim-tree/nvim-web-devicons"
 
-Plugin.event = "VeryLazy"
+Plugin.event = "BufEnter"
 
 function Plugin.init()
   vim.opt.termguicolors = true

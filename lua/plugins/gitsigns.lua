@@ -1,6 +1,6 @@
 local Plugin = { "lewis6991/gitsigns.nvim" }
 
-Plugin.event = { "BufReadPre", "BufNewFile" }
+Plugin.event = { "BufReadPost", "BufNewFile" }
 
 -- See :help gitsigns-usage
 Plugin.opts = {
