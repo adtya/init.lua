@@ -44,6 +44,12 @@ Plugin.opts = {
     header = logo,
     center = {
       {
+        icon = "󰦛 ",
+        desc = "Restore Session",
+        action = 'lua require("persistence").load()',
+        key = "r",
+      },
+      {
         icon = "󰱼 ",
         desc = "Find Text",
         action = "Telescope live_grep",
