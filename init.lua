@@ -16,9 +16,6 @@ require("options")
 opts = {
   spec = nil,
   local_spec = true,
-  diff = {
-    cmd = "diffview.nvim",
-  },
 }
 
 require("lazy").setup("plugins", opts)
