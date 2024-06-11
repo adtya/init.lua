@@ -35,8 +35,4 @@ Plugin.keys = {
   { "<leader>1", "<cmd>Neotree toggle<cr>", desc = "Toggle Neotree" },
 }
 
-function Plugin.config()
-  require("neo-tree").setup({})
-end
-
 return Plugin
